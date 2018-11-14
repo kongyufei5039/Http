@@ -27,6 +27,6 @@
 用来处理连接网络的硬件部分。
 
 #### 2.3 TCP/IP 通信传输流
-!(http://www.ituring.com.cn/figures/2014/PIC%20HTTP/05.d01z.006.png)
+![](http://www.ituring.com.cn/figures/2014/PIC%20HTTP/05.d01z.006.png)
 
 
