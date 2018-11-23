@@ -22,7 +22,9 @@ HTTP 是一种不保存状态，即无状态（stateless）协议。协议本身
 
 #### 3.使用 Cookie 的状态管理
 HTTP/1.1 虽然是无状态协议，但为了实现期望的保持状态功能，于是引入了 Cookie 技术。  
+
 Cookie 会根据从服务器端发送的响应报文内的一个叫做 Set-Cookie 的首部字段信息，通知客户端保存 Cookie。当下次客户端再往该服务器发送请求时，客户端会自动在请求报文中加入 Cookie 值后发送出去。  
+
 服务器端发现客户端发送过来的 Cookie 后，会去检查究竟是从哪一个客户端发来的连接请求，然后对比服务器上的记录，最后得到之前的状态信息。
 
 * 没有 Cookie 信息状态下的请求  
@@ -54,6 +56,7 @@ Cookie 会根据从服务器端发送的响应报文内的一个叫做 Set-Cooki
 #### 5.持久连接节省通信量
 ![](http://www.ituring.com.cn/figures/2014/PIC%20HTTP/06.d02z.018.png)
 每次通信结束都断开TCP连接，下次通信又重新建立TCP连接，增加了通信量的开销。  
+
 为解决上述 TCP 连接的问题，HTTP/1.1 和一部分的 HTTP/1.0 想出了持久连接（HTTP Persistent Connections，也称为 HTTP keep-alive 或 HTTP connection reuse）的方法。持久连接的特点是，只要任意一端没有明确提出断开连接，则保持 TCP 连接状态。
 ![](http://www.ituring.com.cn/figures/2014/PIC%20HTTP/06.d02z.020.png)  
  
